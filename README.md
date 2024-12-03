@@ -1,5 +1,3 @@
-Here’s a simple and engaging README.md for a repository that contains Terraform configuration for creating an S3 bucket:
-
 # Terraform Configuration for S3 Bucket Deployment 🪣
 
 This repository contains Terraform configuration to create an **AWS S3 bucket**. The configuration is flexible, allowing you to define bucket properties such as versioning, access control, and encryption. 🛠️
@@ -60,6 +58,7 @@ Type `yes` when prompted to approve the changes.
 #### Outputs 📤
 
 After applying, the following outputs will be available:
+
 - **Bucket Name:** The name of the created S3 bucket.
 - **Bucket ARN:** The Amazon Resource Name (ARN) of the S3 bucket.
 - **Bucket Region:** The region where the bucket is created.
@@ -76,7 +75,7 @@ Bucket Region = us-west-1
 
 To delete the S3 bucket and all associated resources, run:
 
-```bash 
+```bash
 terraform destroy
 ```
 
@@ -92,10 +91,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-### Highlights:
+### Highlights
+
 1. **User-Friendly Structure**: Includes sections like features, prerequisites, usage, and outputs.
 2. **Customization**: Mentions key customizable variables.
 3. **Clear Instructions**: Provides step-by-step guidance for setup, usage, and cleanup.
 4. **Engaging Emojis**: Adds visual appeal and organizes content effectively.
-
-You can adjust bucket-specific details or variables based on your implementation.
