@@ -7,8 +7,13 @@ terraform {
   }
 
 
-  backend "local" {
-    path = "terraform.tfstate"
+  cloud {
+    organization = "tfc-sujay-01"
+    hostname     = "app.terraform.io"
+    workspaces {
+      project = "hello_s3"
+      name    = "hello_s3_default"
+    }
   }
 }
 provider "aws" {
