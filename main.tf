@@ -1,3 +1,16 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+
+  }
+
+
+  backend "local" {
+    path = "terraform.tfstate"
+  }
+}
 provider "aws" {
   region = var.region
 }
@@ -5,7 +18,7 @@ provider "aws" {
 resource "aws_s3_bucket" "main" {
   bucket = var.bucket_name
   tags = {
-    Name = var.bucket_name
+    Name      = var.bucket_name
     canDelete = "true"
   }
 }
@@ -19,8 +32,8 @@ resource "aws_s3_bucket_ownership_controls" "main" {
 
 resource "aws_s3_bucket_acl" "main" {
   depends_on = [aws_s3_bucket_ownership_controls.main]
-  bucket = aws_s3_bucket.main.id
-  acl    = "private"
+  bucket     = aws_s3_bucket.main.id
+  acl        = "private"
 }
 
 resource "aws_s3_bucket_versioning" "main" {
